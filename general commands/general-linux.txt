@@ -1,0 +1,19 @@
+
+================================================
+	GENERAL LINUX COMMANDS
+-----------------------------------------------
+
+- rm <file name> (remvoes file)
+- rm -rf <directory name> (deletes directory)
+
+
+- sudo apt update (updates and refreshes the package info; downloads the latest package lists; does not install anything)
+- sudo apt upgrade (upgrade all installed packages)
+- sudo apt dist-upgrade (upgrades packages as well as allow install new dependencies and removing old ones if requierd in order to complete main package installation)
+
+
+- make (compile the project; ubild project)
+- make load (load the compiled module into linux system)
+- make unload (remove)
+- make install (copy the compiled files into system location)
+

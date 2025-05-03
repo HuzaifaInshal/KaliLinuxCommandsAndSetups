@@ -1,0 +1,6 @@
+======================================================================
+	FOLLOWING COMMANDS ARE USED TO HANDLE AUDIO STUFF IN LINUX
+---------------------------------------------------------------------
+
+```pavucontrol``` is the command used to open audio related stuff in linux
+
