@@ -1,0 +1,23 @@
+==========================================
+	WIFITE TUTORIAL/COMMANDS
+------------------------------------------
+
+- sudo wifite (start wifite)
+- sudo wifit --wpa --dict wifipass.txt --kill (wpa to start only wpa attack, dict to specify custom dictionary file, kill to remove any program/process that collides with this wifite process)
+
+
+------------|| Convert wifi adapter back to managed-mode ||---------
+
+- airmon-ng check kill (if their is any monitor process like wlan0mon then kill it)
+- airmon-ng stop wlan0mon or airmon-ng stop wlan  (then stop monitor mdoe)
+- service NetworkManager restart (re-enable newtorking)
+
+
+------------|| Using hashcat + gpu to crack password ||------------
+- first check if hashcat detects your gpu by: hashcat -I
+- first copy the hash in cpa format from wifite then convert it to hc22000 with: hcxpcapngtool capture.cap -o handshake.hc22000 --status (status for realtime progress)
+- then use that hash to brute force:
+sudo hashcat -d <GPU device> -m <mode> -a 0 -o <output folder path> <hash file path> <wordlist file path>
+e.g. sudo hashcat -d 1 -m 22000 -a 0 -o cracked.txt handshake.hc22000 /user/share/wordlists/rockyou.txt
+
+

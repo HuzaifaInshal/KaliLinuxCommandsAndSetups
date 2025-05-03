@@ -17,3 +17,5 @@
 - make unload (remove)
 - make install (copy the compiled files into system location)
 
+
+- gzip -d <filename> (unzips a file)

@@ -9,7 +9,7 @@ GENERAL COMMANDS:
 - lsusb (list all usb outputs)
 - lspci (list all pci connector inputs)
 - sudo dmesg | grep -i usb (list all usb connected to pc; dmesg is used for logging kernel level messages\logs; | passes ouptut of prev comm to next comm; grep is string formatting function; -i ignores casing; usb matches string)
-- ip a (uses ip package\network management tool to config network; works same as ifconfig; a stands for address)
+- ip a OR ip addr (uses ip package\network management tool to config network; works same as ifconfig; a stands for address)
 - ifconfig (list all network info)
 - iwconfig (list all wireless network info)
 - ping <domain.com> (pings that server)
