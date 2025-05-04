@@ -1,0 +1,48 @@
+===================================================================
+	THIS REPRESENTS COMMON ISSUES AFTER LINUX INSTALLATION
+-------------------------------------------------------------------
+
+
+----------||We must run following after installation ||--------------
+
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo reboot
+
+If key problem arise then do:
+gpg --keyserver keyserver.ubuntu.com --recv-keys 827C8569F2518CC677FECA1AED65462EC8D5E4C5
+gpg --export 827C8569F2518CC677FECA1AED65462EC8D5E4C5 | sudo tee /etc/apt/trusted.gpg.d/kali.gpg > /dev/null
+
+
+where 827... is keyname
+
+
+----------------|| Connecting Network Driver ||-------------
+This is for TP-Link T2U Plus AC600 and also works on major Alfa adapters that support monitor mode and packet injection
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo reboot now
+sudo apt update
+sudo apt install realtek-rtl88xxau-dkms dkms
+sudo apt install linux-headers-$(uname -r) build-essential bc dkms git libelf-dev rfkill iw
+git clone https://github.com/aircrack-ng/rtl8812au
+cd rtl8812au/
+make
+sudo make install
+lsusb
+iwconfig
+
+then remove and reconnect wifi adapter
+
+
+
+
+
+
+
+
+
+
