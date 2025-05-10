@@ -1,0 +1,20 @@
+============================================================
+                  STEPS TO SETUP QRADAR
+------------------------------------------------------------
+
+- download the QRadar community edition
+- extract .ova inside it open .ovf file
+- login into it with username root and then setup password
+
+- you can continue by using an SSH or Telnet tool like Putty to further use it remotely over same network, for that:
+ - find ip address  with ip a then used that ip to connect to putty
+- once inside files use ls -la to see if setup is their then use ./setup to install QRadar on that linux distro (possibly CentOS)
+
+- to check whether its installed you can check tomcat status, Qradar uses tomcat so tocheck it `systemctl status tomcat`
+- if its active and running then we can initiate the UI interface of QRadar using any webbrowser and go into the ip
+- if you forgot ip then in same putty termincal u can check ip a then go to addr https://<ip-address>
+- login in the ui with `admin` and password setuped earlier
+
+- you can install DSM (Device Support Module) these are components that collects and parses log data into QRadar. You can check its installation by getting DSM user module from QRadar website
+- for setting a DSM source like microsoft windows you can use WinSCP & WinCollect, winSCP is just used to setup FTP server and transfer winSCP to QRadar /storetmp folder
+- its user manual is also available in IBM QRadar website
