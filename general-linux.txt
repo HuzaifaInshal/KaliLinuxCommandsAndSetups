@@ -6,6 +6,7 @@
 - rm <file name> (remvoes file)
 - rm -rf <directory name> (deletes directory)
 
+- ls -la (ls displays files; `l` displays detail information; `a` displays all files)
 
 - sudo apt update (updates and refreshes the package info; downloads the latest package lists; does not install anything)
 - sudo apt upgrade (upgrade all installed packages)
