@@ -20,3 +20,23 @@
 
 
 - gzip -d <filename> (unzips a file)
+
+
+- inxi -Nn (Displays network interface information: -N shows basic network device info e.g. Ethernet, Wi-Fi; -n adds additional details like MAC addresses, driver names, and interface names.)
+- inxi -Fxz (Displays full system information with some privacy filtering: 
+   F gives full output (CPU, GPU, memory, etc.).
+   x adds extra details (e.g., CPU flags, module info).
+   z hides sensitive data like serial numbers, MAC addresses, etc.)
+- inxi -G (Displays GPU info)
+
+
+- sudo su (becomes root)
+- whoami (show user)
+
+
+- lsusb (list all usb outputs)
+- lspci (list all pci connector inputs)
+- lscpu (list cpu config)
+- lsmod (list drivers)
+
+

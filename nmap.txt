@@ -1,0 +1,39 @@
+==================================================
+   		NMAP AND STUFF
+-------------------------------------------------
+
+
+- nmap -sP <network ip>
+  e.g. nmap -sP 10.7.1.0/24
+  will return all active hosts on a network, basically an automation for ping <ip_address>
+
+- sudio nmap -sT -p <port lists seprated by commas> <network ip>
+  e.g. sudo -sT -p 80,443 10.7.1.0/24
+  scans the given port over the network
+  uses the TCP connect scan aka full open scan, uses three way handshake
+
+- sudo nmap -sS -p <port list seprated by commas> <network ip>
+  e.g. sudo nmap -sS -p 80,443 10.7.1.0/24
+  uses stealth scan or syn scan aka half open scan, uses TCP handshake but only first 2
+
+skipping port on above 2 commands will scan top 1000 ports
+ 
+- sudo nmap -O <ip addr>
+  e.g. sudo nmap -O 10.7.0.2
+  get OS level info about a host on a network
+
+- sudo nmap -A <ip>
+  e.g. sudo nmap -A 10.1.1.2
+  get OS info + protocols version + script scanning + traceroute
+
+- sudo nmap -sS -D <duplicate ip address> <target ip address>
+  e.g. nmap -sS -D 10.7.1.8 10.7.1.22
+  will send duplicate packets from another ip address too for obsfucation
+
+- sudo nmap --script <script name> <ip address>
+  e.g. sudo --script vuln 10.2.1.7 
+  will execute all community scripts named vuln on that address
+
+
+
+
