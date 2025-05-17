@@ -20,6 +20,11 @@
 
 
 - gzip -d <filename> (unzips a file)
+- unzip <filename> (extract here)
+- unzip <fildename> -d <foldername> (extract contents to a folder)
+
+
+- sudo find / | grep <filename> (find a specific file in directories)
 
 
 - inxi -Nn (Displays network interface information: -N shows basic network device info e.g. Ethernet, Wi-Fi; -n adds additional details like MAC addresses, driver names, and interface names.)
