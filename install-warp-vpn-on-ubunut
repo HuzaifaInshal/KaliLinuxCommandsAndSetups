@@ -1,0 +1,17 @@
+references: 
+1) https://blog.saif71.com/installing-cloudflare-warp-linux/
+2) https://developers.cloudflare.com/1.1.1.1/setup/linux/
+
+run the commands in sequence:
+
+------------------ Install WARP ----------------
+curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+sudo apt-get update && sudo apt-get install cloudflare-warp
+
+------------------ Turn On WARP ----------------
+warp-cli registration new
+warp-cli connect
+
+------------------ Check if It’s Working ----------------
+curl https://www.cloudflare.com/cdn-cgi/trace/
